@@ -161,9 +161,9 @@ def check(root: Path = ROOT) -> int:
     for name in later:
         print(f"can wait   {name}: {LATER[name]}")
     for name in blocking:
-        print(f"FIX NOW    {name}: {FIXES.get(name, 'post the report in the Classroom help thread')}")
+        print(f"FIX NOW    {name}: {FIXES.get(name, 'post a screenshot of this summary in the CE Discord channel')}")
     print("READY for the first sessions" if not blocking else "NOT READY: fix the items marked FIX NOW")
-    print(f"report: {report_path}  (post a screenshot of this summary in Classroom)")
+    print(f"report: {report_path}  (post a screenshot of this summary in the CE Discord channel)")
     return 1 if blocking else 0
 
 

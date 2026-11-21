@@ -75,4 +75,4 @@ Never commit, post or share the key. It has a spending cap; ask the mentors if y
 | `uv` not found | Install uv (setup guide), then open a new terminal |
 | Install fails with "No such file or directory" on Windows | The folder path is too long: clone again into `C:\ce\ce-track` |
 | Lab files broken beyond repair | `uv run ce.py reset S01` restores a session's starting state; your files go to `backups/` first |
-| Anything else | `uv run ce.py check`, then post a screenshot of the summary in the Classroom help thread |
+| Anything else | `uv run ce.py check`, then post a screenshot of the summary in the CE Discord channel |
