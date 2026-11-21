@@ -1,0 +1,9 @@
+# Your own work and local files: never part of the course repository
+work/
+backups/
+models/
+.venv/
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
