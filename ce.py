@@ -188,6 +188,7 @@ def main(argv: list[str] | None = None) -> int:
     reset.add_argument("--yes", action="store_true", help="do it without asking")
     sub.add_parser("list", help="sessions released so far")
     args = parser.parse_args(argv)
+    sys.stdout.reconfigure(line_buffering=True)  # keep our lines in order with the child scripts' output
 
     if args.command == "list":
         print("released:", ", ".join(released()))
