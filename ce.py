@@ -16,6 +16,8 @@ import os
 import re
 import subprocess
 import sys
+import time
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -95,6 +97,9 @@ def env_file_text(example: str, models: Path) -> str:
 
 def restore(session: str, kit_only: bool, root: Path = ROOT, dry_run: bool = False) -> dict:
     p = paths(root)
+    # ce_reset names backups by the second; wait out a collision instead of failing half-way
+    while not dry_run and any(p["backups"].glob(f"{datetime.now():%Y%m%d-%H%M%S}-before-*")):
+        time.sleep(0.2)
     return load_reset(root).reset(session, p["work"], p["checkpoints"], kit_only=kit_only, dry_run=dry_run,
                                   backup_root=p["backups"])
 
