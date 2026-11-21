@@ -19,7 +19,7 @@ fictional company NovaTech, and learn to decide what a model sees and to prove i
 Windows (PowerShell):
 
     mkdir C:\ce ; cd C:\ce
-    git clone <course repository URL> ce-track
+    git clone https://github.com/byruajit/ce-track.git ce-track
     cd ce-track
     uv sync
     uv run ce.py setup
@@ -27,7 +27,7 @@ Windows (PowerShell):
 Mac (Terminal):
 
     mkdir -p ~/ce && cd ~/ce
-    git clone <course repository URL> ce-track
+    git clone https://github.com/byruajit/ce-track.git ce-track
     cd ce-track
     uv sync
     uv run ce.py setup
